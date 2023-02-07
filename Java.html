@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #sidebar-menu {
+            transition: all 0.3s ease-out;
+        }
+
+        #menu-toggle:checked+#sidebar-menu {
+            display: flex;
+        }
+    </style>
+    <script>
+        const toggle = document.querySelector("#menu-toggle");
+        const sidebar = document.querySelector("#sidebar-menu");
+
+        toggle.addEventListener("click", function () {
+            sidebar.classList.toggle("hidden");
+        });
+    </script>
+    <title>Register Page</title>
+</head>
+
+<body class="bg-gray-900">
+
+    <header class="bg-gray-900 text-white py-3">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-10 h-10 text-white p-2 bg-grey-500 rounded-full">
+                    <path d="M12 2L2 -9zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl text-gray-500">Louise</span>
+            </a>
+            <nav
+                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+
+                <a href="register.html" class="mr-5 text-gray-500 hover:text-white">Register</a>
+                <a href="about.html" class="mr-5 text-gray-500 hover:text-white">About</a>
+                <a class="mr-5 text-gray-500 hover:text-white">Third Link</a>
+                <a class="mr-5 text-gray-500 hover:text-white">Fourth Link</a>
+            </nav>
+            <a href="login.html">
+                <button
+                    class="inline-flex items-center bg-gray-900 border-0 py-1 px-3 focus:outline-none hover:bg-gray-800 rounded text-base mt-4 md:mt-0">Login
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </button></a>
+        </div>
+    </header>
+
+    <div class="flex flex-col h-screen bg-gray-800">
+        <button class="bg-gray-700 p-2 text-white font-medium hover:bg-gray-600" id="sidebar-menu">
+            Menu
+        </button>
+        <nav class="flex-1 hidden p-4 bg-gray-700" id="sidebar-menu">
+            <a class="block p-2 text-white hover:bg-gray-600" href="#">Home</a>
+            <a class="block p-2 text-white hover:bg-gray-600" href="#">About</a>
+            <a class="block p-2 text-white hover:bg-gray-600" href="#">Contact</a>
+        </nav>
+    </div>
+
+
+
+</body>
+
+
+</html>
